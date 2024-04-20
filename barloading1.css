@@ -1,0 +1,73 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	background-color: #000;
+}
+.ashoka_chakra {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 9999;
+}
+.ashoka_chakra img {
+	width: 10vh;
+	height: 10vh;
+	animation: rotate 5s linear infinite;
+}
+@keyframes rotate {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+ul {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) rotate(90deg);
+	display: flex;
+}
+ul li {
+	list-style: none;
+	width: 10vh;
+	height: 60vh;
+	margin: 0;
+	padding: 0;
+	animation: loading 0.6s infinite alternate;
+}
+
+@keyframes loading {
+	0% {
+		transform: scaleY(0);
+	}
+	25% {
+		transform: scaleY(1);
+	}
+	50% {
+		transform: scaleY(1);
+	}
+	75% {
+		transform: scaleY(1);
+	}
+	100% {
+		transform: scaleY(2);
+	}
+}
+
+ul li:nth-child(1) {
+	background-color: #ff671f; /* Set first bar color to #FF671F */
+	animation-delay: 0.1s;
+}
+ul li:nth-child(2) {
+	background-color: #fff; /* Set second bar color to #fff */
+	animation-delay: 0.2s;
+}
+ul li:nth-child(3) {
+	background-color: #046a38; /* Set third bar color to #046A38 */
+	animation-delay: 0.3s;
+}
